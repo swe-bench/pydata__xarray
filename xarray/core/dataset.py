@@ -4182,7 +4182,7 @@ class Dataset(
         indexed_coords = set(coord_names) & set(self._indexes)
 
         if indexed_coords:
-            raise ValueError(
+            warnings.warn(
                 f"those coordinates already have an index: {indexed_coords}"
             )
 
